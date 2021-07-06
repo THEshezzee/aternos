@@ -1,6 +1,6 @@
 {
 	"ip":"Minerunner3.aternos.me",
 	"port": "25565",
-	"name": "bobycar",
-	"auto-night-skip":"true"
+	"name": "bobycarers",
+	"auto-night-skip":"false"
 }
