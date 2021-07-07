@@ -79,4 +79,8 @@ bot.on('kicked', function(reason) {
     console.log("disconnected:", reason, );
 });
 
+bot.on('chat', function(username, message) {  //idk lol
+	console.log(username + ": " + message);
+});
+
 //wtf
