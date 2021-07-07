@@ -14,6 +14,7 @@ var maxrandom = 5; // 0-5 seconds added to movement interval (randomly)
 var host = data["ip"];
 var username = data["name"]
 var nightskip = data["auto-night-skip"]
+var chat = data["AutoReg"]
 var bot = mineflayer.createBot({
   host: host,
   username: username
@@ -28,15 +29,17 @@ bot.loadPlugin(cmd)
 
 
 bot.on('login',function(){
-	console.log("Logged In")
-	bot.chat("/register 123451");
+    console.log("Logged In")
+    if(chat == "true"){
+    bot.chat("/register 123451");
+    bot.chat("/login 123451")};
 });
 
 bot.on('time', function(time) {
-	if(nightskip == "true"){
-	if(bot.time.timeOfDay >= 13000){
-	bot.chat('/time set day')
-	}}
+    if(nightskip == "true"){
+    if(bot.time.timeOfDay >= 13000){
+    bot.chat('/time set day')
+    }}
     if (connected <1) {
         return;
     }
@@ -72,3 +75,6 @@ bot.on('death',function() {
     bot.emit("respawn")
 });
 
+bot.on('kicked', console.log)
+
+//wtf
