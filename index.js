@@ -29,10 +29,10 @@ bot.loadPlugin(cmd)
 
 
 bot.on('login',function(){
-    console.log("Logged In")
+    console.log("Logged In as: " + bot.username)
     if(chat == "true"){
-    bot.chat("/register 123451");
-    bot.chat("/login 123451")};
+    bot.chat("/register 1234512");
+    bot.chat("/login 1234512")};
 });
 
 bot.on('time', function(time) {
@@ -75,6 +75,8 @@ bot.on('death',function() {
     bot.emit("respawn")
 });
 
-bot.on('kicked', console.log)
+bot.on('kicked', function(reason) {
+    console.log("disconnected:", reason, );
+});
 
 //wtf
