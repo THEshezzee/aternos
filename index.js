@@ -15,6 +15,7 @@ var host = data["ip"];
 var username = data["name"]
 var nightskip = data["auto-night-skip"]
 var chat = data["AutoReg"]
+var ChatOutPut = data["ReadChat"]
 var bot = mineflayer.createBot({
   host: host,
   username: username
@@ -80,7 +81,8 @@ bot.on('kicked', function(reason) {
 });
 
 bot.on('chat', function(username, message) {  //idk lol
-	console.log(username + ": " + message);
+    if(ChatOutPut == "true"){
+	console.log(username + ": " + message)};
 });
 
 //wtf
