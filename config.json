@@ -1,6 +1,7 @@
 {
-	"ip":"JoaquinFW.aternos.me",
+	"ip":"TheBitterDonut.aternos.me",
 	"port": "25565",
 	"name": "bobycarers",
-	"auto-night-skip":"false"
+	"auto-night-skip":"false",
+	"AutoReg":"true" 
 }
