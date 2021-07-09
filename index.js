@@ -29,7 +29,7 @@ bot.loadPlugin(cmd)
 
 
 
-bot.on('login',function(){
+bot.on('login',function(){   //on login
     console.log("Succses joined: " + host)
     setTimeout(function() {console.log("Logged in as: " + bot.username)}, 1500);
     if(chat == "true"){
@@ -75,15 +75,18 @@ bot.on('spawn',function() {
 
 bot.on('death',function() {
     bot.emit("respawn")
+
 });
 
 bot.on('kicked', function(reason) {
     console.log("disconnected:", reason, );
+    bot.emit("reconnect")
 });
 
 bot.on('chat', function(username, message) {  //idk lol
     if(ChatOutPut == "true"){
 	console.log(username + ": " + message)};
 });
+
 
 //wtf
