@@ -38,7 +38,7 @@ bot.loadPlugin(cmd)
 
 bot.on('login',function(){   //on login
     process.title = ("Worked on: " + host)
-    console.log("Succses joined: " + host)
+    console.log("Succsess joined: " + host)
     setTimeout(function() {console.log("Logged in as: " + bot.username)}, 1500);
     if(chat == "true"){
     bot.chat("/register 1234512 1234512");
