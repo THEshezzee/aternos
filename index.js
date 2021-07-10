@@ -16,6 +16,13 @@ var username = data["name"]
 var nightskip = data["auto-night-skip"]
 var chat = data["AutoReg"]
 var ChatOutPut = data["ReadChat"]
+var rn = require('random-number');
+var f = {
+  min:  0
+, max:  10000
+, integer: true  
+}
+
 var bot = mineflayer.createBot({
   host: host,
   username: username
@@ -71,6 +78,9 @@ bot.on('time', function(time) {
 
 bot.on('spawn',function() {
     connected=1;
+    if (connected=1) {
+        bot.chat("Love is shit! " + host + " " + rn(f))
+    }
 });
 
 bot.on('death',function() {
