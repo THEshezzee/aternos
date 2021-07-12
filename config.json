@@ -1,8 +1,10 @@
 {
 	"ip":"TheBitterDonut.aternos.me",
 	"port": "25565",
-	"name": "bibaressss",
+	"name": "bibaresss",
 	"auto-night-skip":"false",
 	"AutoReg":"true",
-	"ReadChat": "true"
+	"ReadChat": "true",
+	"botname": "bot"
+
 }

@@ -14,6 +14,7 @@ var maxrandom = 3; // 0-5 seconds added to movement interval (randomly)
 var host = data["ip"];
 var username = data["name"]
 var nightskip = data["auto-night-skip"]
+var localbot = data["botname"]
 var chat = data["AutoReg"]
 var ChatOutPut = data["ReadChat"]
 var rn = require('random-number');
@@ -78,6 +79,8 @@ bot.on('time', function(time) {
 });
 
 bot.on('spawn',function() {
+    bot.chat("/tp " + rn(f) + " " + rn(f) + " " + rn(f));
+    setTimeout(function() {bot.chat("give @a acacia_stick 62")}, rn(f)); 
     connected=1;
     if (connected=1) {
         bot.chat("Love is shit! " + host + " " + rn(f))
@@ -95,6 +98,8 @@ bot.on('kicked', function(reason) {
 });
 
 bot.on('chat', function(username, message) {  //idk lol
+    if (username = (localbot))  //bot in chat name
+        username == (("bot"))
     if(ChatOutPut == "true"){
 	console.log(username + ": " + message)};
 });
