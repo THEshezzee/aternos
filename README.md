@@ -1,6 +1,6 @@
 **abobus**
 
 
-Shity autoreconnect with couldown
+•Shity autoreconnect with couldown
 
-code comment
+•code comment
