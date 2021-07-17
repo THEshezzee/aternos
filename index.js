@@ -15,19 +15,45 @@ var host = data["ip"];
 var username = data["name"]
 var nightskip = data["auto-night-skip"]
 var localbot = data["botname"]
+var reconnectTime = data["ReconnectTime"] 
 var chat = data["AutoReg"]
 var ChatOutPut = data["ReadChat"]
-var rn = require('random-number');
+
+
+var rn = require('random-number'); //random values
+var randomTime = {
+    min:31054
+ ,  max: 180000
+ , integer: false
+}
+var c = {
+  min: 0
+, max: 190000
+, integer: true
+}  //shiro of NGNF o(*°▽°*)o
 var f = {
   min:  0
 , max:  10000
 , integer: true  
 }
 
-var bot = mineflayer.createBot({
+
+var bot = mineflayer.createBot({     //bot live start here
   host: host,
-  username: username
+  username: (username + rn(c))
 });
+
+function createBotty () {
+    const bot = mineflayer.createBot({    //some wildsticks
+  host: host,
+  username: (username + rn(c)) }     //fucky me daddy `(*>﹏<*)′
+    
+)}; 
+
+setTimeout(function() {bot.on('end', createBotty)}, reconnectTime);   //auto reconnect  
+
+setTimeout(function() {createBotty()}, rn(randomTime));  //second bot to safe        
+
 function getRandomArbitrary(min, max) {
        return Math.random() * (max - min) + min;
 
@@ -95,7 +121,9 @@ bot.on('death',function() {
 bot.on('kicked', function(reason) {
     console.log("disconnected:", reason, );
     bot.emit("reconnect")
+     
 });
+
 
 bot.on('chat', function(username, message) {  //idk lol
     if (username = (localbot))  //bot in chat name
