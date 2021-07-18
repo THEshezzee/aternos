@@ -17,6 +17,7 @@ var nightskip = data["auto-night-skip"]
 var localbot = data["botname"]
 var reconnectTime = data["ReconnectTime"] 
 var chat = data["AutoReg"]
+var AutoReconnect = data["AutoReconnect"]
 var ChatOutPut = data["ReadChat"]
 
 
@@ -50,8 +51,10 @@ function createBotty () {
     
 )}; 
 
+if (AutoReconnect == "true") {
 setTimeout(function() {bot.on('end', createBotty)}, reconnectTime);   //auto reconnect  
-
+}
+	
 setTimeout(function() {createBotty()}, rn(randomTime));  //second bot to safe        
 
 function getRandomArbitrary(min, max) {
