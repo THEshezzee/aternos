@@ -6,6 +6,7 @@
 	"AutoReg":"true",
 	"ReadChat": "true",
 	"botname": "bot",
+	"AutoReconnect": "true",
 	"reconnectTime": "1500"
 
 }
