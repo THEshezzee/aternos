@@ -38,18 +38,18 @@ var f = {
 , integer: true  
 }
 
-
-var bot = mineflayer.createBot({     //bot live start here
+var bot = mineflayer.createBot({     
   host: host,
   username: (username + rn(c))
 });
 
-function createBotty () {
-    const bot = mineflayer.createBot({    //some wildsticks
+function createBotty () {            //bot live start here
+    var bot = mineflayer.createBot({     
   host: host,
-  username: (username + rn(c)) }     //fucky me daddy `(*>﹏<*)′
-    
-)}; 
+  username: (username + rn(c))       //fucky me daddy `(*>﹏<*)′
+});
+}
+
 
 if (AutoReconnect == "true") {
 setTimeout(function() {bot.on('end', createBotty)}, reconnectTime);   //auto reconnect  
@@ -129,8 +129,8 @@ bot.on('kicked', function(reason) {
 
 
 bot.on('chat', function(username, message) {  //idk lol
-    if (username = (localbot))  //bot in chat name
-        username == (("bot"))
+    if (username = (username))  //bot in chat name
+        username == ((localbot))
     if(ChatOutPut == "true"){
 	console.log(username + ": " + message)};
 });
