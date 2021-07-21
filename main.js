@@ -17,6 +17,7 @@ var nightskip = data["auto-night-skip"]
 var localbot = data["botname"]
 var reconnectTime = data["ReconnectTime"] 
 var chat = data["AutoReg"]
+var port = data["port"]
 var AutoReconnect = data["AutoReconnect"]
 var ChatOutPut = data["ReadChat"]
 
@@ -40,12 +41,14 @@ var f = {
 
 var bot = mineflayer.createBot({     
   host: host,
+  port: port,
   username: (username + rn(c))
 });
 
 function createBotty () {            //bot live start here
     var bot = mineflayer.createBot({     
   host: host,
+  port: port,
   username: (username + rn(c))       //fucky me daddy `(*>﹏<*)′
 });
 }
