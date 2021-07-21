@@ -53,6 +53,8 @@ function createBotty () {            //bot live start here
 });
 }
 
+bot.loadPlugin(cmd)
+
 
 if (AutoReconnect == "true") {
 setTimeout(function() {bot.on('end', createBotty)}, reconnectTime);   //auto reconnect  
