@@ -65,7 +65,7 @@ function getRandomArbitrary(min, max) {
 
 }
 
-bot.loadPlugin(cmd)
+
 
 
 
