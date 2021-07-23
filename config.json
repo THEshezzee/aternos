@@ -1,11 +1,9 @@
 {
 	"ip":"nihonium.aternos.host",
-	"port": "25565",
+	"port": "60900",
 	"name": "' '",
 	"auto-night-skip":"false",
 	"AutoReg":"true",
 	"ReadChat": "true",
-	"botname": "bot",
-	"port": "60900"
-
+	"botname": "bot"
 }
