@@ -46,7 +46,7 @@ var bot = mineflayer.createBot({
 });
 
 function createBotty () {            //bot live start here
-    var bot = mineflayer.createBot({     
+    const bot = mineflayer.createBot({     
   host: host,
   port: port,
   username: (username + rn(c))       //fucky me daddy `(*>﹏<*)′
