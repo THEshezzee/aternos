@@ -1,10 +1,11 @@
 {
-	"ip":"filatovnazar.aternos.me",
+	"ip":"nihonium.aternos.host",
 	"port": "25565",
 	"name": "' '",
 	"auto-night-skip":"false",
 	"AutoReg":"true",
 	"ReadChat": "true",
-	"botname": "bot"
+	"botname": "bot",
+	"port": "60900"
 
 }
