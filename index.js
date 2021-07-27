@@ -16,7 +16,6 @@ var username = data["name"]
 var nightskip = data["auto-night-skip"]
 var localbot = data["botname"]
 var chat = data["AutoReg"]
-var port = data["port"]
 var ChatOutPut = data["ReadChat"]
 var rn = require('random-number');
 var f = {
@@ -28,7 +27,6 @@ var f = {
 var bot = mineflayer.createBot({
   host: host,
   username: username,
-  port: port
 });
 function getRandomArbitrary(min, max) {
        return Math.random() * (max - min) + min;
